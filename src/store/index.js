@@ -1,5 +1,3 @@
-import { countStore } from './counter';
-import { targetStore } from './target';
-import { useStoreGithub } from './github';
+import { useUserInfoStore } from './userinfo';
 
-export { targetStore, countStore, useStoreGithub };
+export { useUserInfoStore };
