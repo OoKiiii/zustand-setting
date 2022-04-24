@@ -29,6 +29,10 @@ function App() {
         });
     };
 
+    const getUserData = data => {
+        getData(data);
+    };
+
     console.log(state);
 
     return (
@@ -48,7 +52,7 @@ function App() {
                 <div>{target}</div>
                 <button onClick={() => setTarget()}>setTarget</button>
                 <br />
-                <button onClick={() => getData(state.name)}>get</button>
+                <button onClick={() => getUserData(state.name)}>get</button>
                 <br />
                 <input type="text" name="name" onChange={e => handleChange(e)} />
             </header>
