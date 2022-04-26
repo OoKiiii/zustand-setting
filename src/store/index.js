@@ -1,3 +1,3 @@
-import { useUserInfoStore } from './userinfo';
+import { juno } from './userinfo';
 
-export { useUserInfoStore };
+export { juno };

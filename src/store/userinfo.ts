@@ -22,12 +22,14 @@ interface ServerData {
 const initialState: userInfoType = {
     isLogin: false,
     token: '',
+    
 };
 
-export const useUserInfoStore = create(
+export const juno = create(
     persist(
         set => ({
             initialState,
+            isText: '123',
             onLogin: async (request: string) => {
                 console.log('1');
                 try {
@@ -41,6 +43,9 @@ export const useUserInfoStore = create(
                     });
                 }
             },
+            setText: (request: string) => {set({
+                isText: request,
+            })}
         }),
         {
             name: 'userinfo',
